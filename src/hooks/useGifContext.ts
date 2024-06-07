@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Context, UserContext } from "./UserContext";
+import { Context, GifContext } from "./GifContext";
 
-export function useUserContext(): Context {
-  const userContext = useContext(UserContext);
+export function useGifContext(): Context {
+  const userContext = useContext(GifContext);
 
   if (userContext === undefined) {
     throw new Error("usePlanes must be used within a PlanesProvider");

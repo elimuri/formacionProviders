@@ -3,14 +3,12 @@ import { HomePage } from "./views/HomePage";
 import { LoginPage } from "./views/LoginPage";
 import { AboutPage } from "./views/AboutPage";
 import { Navbar } from "./views/Navbar";
-import { UserProvider } from "./hooks/UserProvider";
+import { GifProvider } from "./hooks/GifProvider";
 
 export const App = () => {
   return (
     <>
-      <h1>MainApp</h1>
-
-      <UserProvider>
+      <GifProvider>
         <Navbar />
 
         <hr />
@@ -21,7 +19,7 @@ export const App = () => {
           <Route path="about" element={<AboutPage />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
-      </UserProvider>
+      </GifProvider>
     </>
   );
 };

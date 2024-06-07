@@ -1,8 +1,8 @@
 import React from "react";
-import { useUserContext } from "../hooks/useUserContext";
+import { useGifContext } from "../hooks/useGifContext";
 
 export const LoginPage: React.FC = () => {
-  const { gif } = useUserContext();
+  const { gif, onClick } = useGifContext();
 
   return (
     <>
@@ -10,6 +10,10 @@ export const LoginPage: React.FC = () => {
       <hr />
 
       <img src={gif} alt="" />
+
+      <br />
+
+      <button onClick={onClick}>Cambiar GIF</button>
     </>
   );
 };
