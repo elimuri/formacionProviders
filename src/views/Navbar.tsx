@@ -13,14 +13,13 @@ export const Navbar: React.FC = () => {
 };
 
 const NavBarOptions = styled.div`
-  display: flex;
-  flex-direction: column;
-
+  margin-top: 10px;
   margin-left: 40px;
+  margin-bottom: 10px;
 `;
 
 const RouteLink = styled(Link)`
-  margin-bottom: 5px;
+  margin-right: 50px;
 
   font-weight: 600;
 
