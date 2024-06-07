@@ -1,8 +1,8 @@
 import React from "react";
-import { useGifContext } from "../hooks/useGifContext";
+import { useGifs } from "../hooks/useGifs";
 
 export const HomePage: React.FC = () => {
-  const { gif, onClick } = useGifContext();
+  const { gif, onClick } = useGifs();
 
   return (
     <>
