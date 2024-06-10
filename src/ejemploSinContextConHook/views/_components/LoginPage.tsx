@@ -2,7 +2,17 @@ import React from "react";
 import { useObtenerGif } from "../../hooks/useObtenerGif";
 
 export const LoginPage: React.FC = () => {
-  const { gif, onClick } = useObtenerGif();
+  const { gif, isLoading, onClick } = useObtenerGif();
+
+  if (isLoading) {
+    return (
+      <>
+        <h1>AboutPage</h1>
+        <hr />
+        Cargando...
+      </>
+    );
+  }
 
   return (
     <>

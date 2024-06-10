@@ -8,9 +8,15 @@ interface Props {
 
 export const GifProvider: React.FC<Props> = ({ children }) => {
   const [currentGif, setCurrentGif] = useState<string | undefined>(undefined);
+  const [hasError, setHasError] = useState(false);
 
   const onLoad = async () => {
-    setCurrentGif(await getGif());
+    try {
+      setCurrentGif(undefined);
+      setCurrentGif(await getGif());
+    } catch (error) {
+      setHasError(true);
+    }
   };
 
   useEffect(() => {
@@ -20,6 +26,10 @@ export const GifProvider: React.FC<Props> = ({ children }) => {
   const handleClick = () => {
     onLoad();
   };
+
+  if (hasError) {
+    return <>Ha habido un error</>;
+  }
 
   if (currentGif === undefined) {
     return <>Cargando...</>;

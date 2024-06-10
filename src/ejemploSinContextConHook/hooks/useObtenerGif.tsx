@@ -5,6 +5,7 @@ export const useObtenerGif = () => {
   const [currentGif, setCurrentGif] = useState<string | undefined>(undefined);
 
   const onLoad = async () => {
+    setCurrentGif(undefined);
     setCurrentGif(await getGif());
   };
 
@@ -12,12 +13,15 @@ export const useObtenerGif = () => {
     onLoad();
   }, []);
 
+  const isLoading = currentGif === undefined;
+
   const handleClick = () => {
     onLoad();
   };
 
   return {
     gif: currentGif,
+    isLoading,
     onClick: handleClick,
   };
 };

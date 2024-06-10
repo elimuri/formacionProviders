@@ -5,6 +5,7 @@ export const LoginPage: React.FC = () => {
   const [currentGif, setCurrentGif] = useState<string | undefined>(undefined);
 
   const onLoad = async () => {
+    setCurrentGif(undefined);
     setCurrentGif(await getGif());
   };
 
@@ -15,6 +16,10 @@ export const LoginPage: React.FC = () => {
   const handleClick = () => {
     onLoad();
   };
+
+  if (currentGif === undefined) {
+    return <>Cargando...</>;
+  }
 
   return (
     <>
