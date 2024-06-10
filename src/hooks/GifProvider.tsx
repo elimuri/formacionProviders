@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GifContext } from "./GifContext";
-import { getGif } from "../services/getGif";
+import { getGif } from "../domain/services/getGif";
 
 interface Props {
   children: React.ReactNode;
