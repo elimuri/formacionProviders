@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getGif } from "../domain/services/getGif";
+import { getGif } from "../../domain/services/getGif";
 
-export const HomePage: React.FC = () => {
+export const AboutPage: React.FC = () => {
   const [currentGif, setCurrentGif] = useState<string | undefined>(undefined);
 
   const onLoad = async () => {
@@ -18,7 +18,7 @@ export const HomePage: React.FC = () => {
 
   return (
     <>
-      <h1>HomePage</h1>
+      <h1>AboutPage</h1>
       <hr />
 
       <img src={currentGif} alt="" />

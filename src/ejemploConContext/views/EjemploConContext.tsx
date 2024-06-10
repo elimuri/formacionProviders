@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { HomePage } from "./HomePage";
-import { LoginPage } from "./LoginPage";
-import { AboutPage } from "./AboutPage";
-import { Navbar } from "./Navbar";
+import { HomePage } from "./_components/HomePage";
+import { LoginPage } from "./_components/LoginPage";
+import { AboutPage } from "./_components/AboutPage";
+import { Navbar } from "./_components/Navbar";
 import { GifProvider } from "../hooks/GifProvider";
 
 export const EjemploConContext = () => {

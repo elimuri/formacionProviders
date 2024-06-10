@@ -1,12 +1,12 @@
 import React from "react";
-import { useGifs } from "../hooks/useGifs";
+import { useGifs } from "../../hooks/useGifs";
 
-export const HomePage: React.FC = () => {
+export const LoginPage: React.FC = () => {
   const { gif, onClick } = useGifs();
 
   return (
     <>
-      <h1>HomePage</h1>
+      <h1>LoginPage</h1>
       <hr />
 
       <img src={gif} alt="" />
