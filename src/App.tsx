@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { HomePage } from "./views/HomePage";
-import { LoginPage } from "./views/LoginPage";
-import { AboutPage } from "./views/AboutPage";
-import { Navbar } from "./views/Navbar";
-import { GifProvider } from "./hooks/GifProvider";
+import { HomePage } from "./ejemploConContext/views/HomePage";
+import { LoginPage } from "./ejemploConContext/views/LoginPage";
+import { AboutPage } from "./ejemploConContext/views/AboutPage";
+import { Navbar } from "./ejemploConContext/views/Navbar";
+import { GifProvider } from "./ejemploConContext/hooks/GifProvider";
 
 export const App = () => {
   return (
