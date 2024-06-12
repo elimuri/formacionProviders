@@ -1,13 +1,13 @@
 import React from "react";
 import { GifContext } from "./GifContext";
-import { useLoadGift } from "./useLoadGift";
+import { useLoadGif } from "./useLoadGif";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const GifProvider: React.FC<Props> = ({ children }) => {
-  const { gif, hasError, onLoad } = useLoadGift()
+  const { gif, hasError, onLoad } = useLoadGif();
 
   if (hasError) {
     return <>Ha habido un error</>;

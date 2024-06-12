@@ -1,8 +1,8 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
-import { useLoadGift } from "../useLoadGift";
+import { useLoadGif } from "../useLoadGif";
 import * as gifService from "../../domain/services/getGif";
 
-describe("useLoadGift", () => {
+describe("useLoadGif", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -11,7 +11,7 @@ describe("useLoadGift", () => {
     const mockGifUrl = "https://example.com/gif.gif";
     jest.spyOn(gifService, "getGif").mockResolvedValue(mockGifUrl);
 
-    const { result } = renderHook(useLoadGift);
+    const { result } = renderHook(useLoadGif);
 
     await waitFor(() => expect(result.current.gif).toBe(mockGifUrl));
     expect(result.current.hasError).toBe(false);
@@ -23,7 +23,7 @@ describe("useLoadGift", () => {
       .spyOn(gifService, "getGif")
       .mockRejectedValue(new Error("Failed to load gif"));
 
-    const { result } = renderHook(useLoadGift);
+    const { result } = renderHook(useLoadGif);
 
     await waitFor(() => expect(result.current.hasError).toBe(true));
     expect(result.current.gif).toBeUndefined();
@@ -34,7 +34,7 @@ describe("useLoadGift", () => {
     const mockGifUrl = "https://example.com/gif.gif";
     jest.spyOn(gifService, "getGif").mockResolvedValue(mockGifUrl);
 
-    const { result } = renderHook(useLoadGift);
+    const { result } = renderHook(useLoadGif);
 
     await act(() => result.current.onLoad());
 

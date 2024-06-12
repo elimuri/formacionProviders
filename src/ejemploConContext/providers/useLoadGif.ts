@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGif } from "../domain/services/getGif";
 
-export const useLoadGift = () => {
+export const useLoadGif = () => {
   const [currentGif, setCurrentGif] = useState<string | undefined>(undefined);
   const [hasError, setHasError] = useState(false);
 
