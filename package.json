@@ -5,8 +5,9 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
+    "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
+    "@types/jest": "^29.5.12",
     "@types/node": "^16.18.98",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -15,13 +16,13 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.11",
-    "typescript": "^4.9.5",
+    "typescript": "^5.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.4"
   }
 }

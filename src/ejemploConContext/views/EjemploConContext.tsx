@@ -3,7 +3,7 @@ import { HomePage } from "./_components/HomePage";
 import { LoginPage } from "./_components/LoginPage";
 import { AboutPage } from "./_components/AboutPage";
 import { Navbar } from "./_components/Navbar";
-import { GifProvider } from "../hooks/GifProvider";
+import { GifProvider } from "../providers/GifProvider";
 
 export const EjemploConContext = () => {
   return (

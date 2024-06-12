@@ -5,14 +5,14 @@ import { useGifs } from "../useGifs";
 import userEvent from "@testing-library/user-event";
 
 describe("Con el Context de GIFs", () => {
-  it("si todavía no está listo el GIF a mostrar, se muestra un loader", () => {
+  it("si todavía no está listo el GIF a mostrar, se muestra un loader", async () => {
     render(
       <GifProvider>
         <TestComponent />
       </GifProvider>
     );
 
-    expect(screen.getByText("Cargando...")).toBeVisible();
+    expect(await screen.findByText("Cargando...")).toBeVisible();
   });
 
   it("si hay un error al obtener el GIF, se muestra un mensaje de error", async () => {
