@@ -1,5 +1,5 @@
 import React from "react";
-import { useGifs } from "../../hooks/useGifs";
+import { useGifs } from "../../providers/useGifs";
 
 export const HomePage: React.FC = () => {
   const { gif, onClick } = useGifs();
