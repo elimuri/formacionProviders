@@ -5,7 +5,7 @@ import { AboutPage } from "./_components/AboutPage";
 import { Navbar } from "./_components/Navbar";
 import { GifProvider } from "../providers/GifProvider";
 
-export const EjemploConContext = () => {
+export const EjemploConContextConHook = () => {
   return (
     <>
       <GifProvider>
